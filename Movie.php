@@ -98,9 +98,34 @@ class Movie
 $movie1 = new Movie('La vita è bella', 'Roberto Benigni', '140');
 $movie1->setCast('pippo');
 $movie1->setDuration('140');
-var_dump($movie1);
+// var_dump($movie1);
 $movie2 = new Movie('Harry Potter', 'Chris Columbus', '160');
 $movie2->setCast('harry e hermione');
 $movie2->setInfo('Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni sequi praesentium, quos harum soluta accusantium esse nemo animi quibusdam beatae repudiandae suscipit in consectetur repellendus reiciendis sint voluptas, laboriosam exercitationem?');
 $movie2->setDuration('160');
-var_dump($movie2);
+// var_dump($movie2);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+</head>
+
+<body>
+
+    <h1>Titolo film 1: <?= $movie1->title ?></h1>
+    <ul>
+        <li>Regista: <?= $movie1->directorMovie ?></li>
+        <li>Durata: <?= $movie1->duration ?></li>
+        <li>Cast: <?= $movie1->cast ?></li>
+    </ul>
+    <h1>Titolo film 2: <?= $movie2->title ?></h1>
+    <p>Descrizione film 2: <?= $movie2->info ?></p>
+</body>
+
+</html>
